@@ -1,0 +1,2124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VHM Industries Ltd | Under Liquidation</title>
+  <meta
+    name="description"
+    content="Official public information and announcements portal for VHM Industries Ltd under liquidation."
+  >
+  <style>
+    :root {
+      --bg: #f6f8fc;
+      --surface: #ffffff;
+      --surface-alt: #f8fbff;
+      --surface-soft: #eef5ff;
+      --border: #d7e0ee;
+      --border-strong: #c5d1e5;
+      --text: #32415d;
+      --text-muted: #60708a;
+      --heading: #162744;
+      --primary: #3a7fe3;
+      --primary-deep: #2252a3;
+      --accent: #c89a62;
+      --accent-soft: #efe1cd;
+      --dark-surface: #173567;
+      --dark-surface-2: #244d8b;
+      --shadow: 0 18px 38px rgba(32, 58, 102, 0.1);
+      --radius-lg: 24px;
+      --radius-md: 18px;
+      --radius-sm: 12px;
+      --max-width: 1180px;
+      --header-height: 88px;
+      --font-sans: Calibri, "Segoe UI", Candara, "Franklin Gothic Medium", Arial, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      min-width: 320px;
+      font-family: var(--font-sans);
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(200, 154, 98, 0.12), transparent 18%),
+        radial-gradient(circle at top right, rgba(58, 127, 227, 0.12), transparent 20%),
+        linear-gradient(180deg, #fdfefe 0%, var(--bg) 56%, #f4f7fc 100%);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a,
+    button {
+      font: inherit;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      border: 0;
+      background: none;
+      cursor: pointer;
+      color: inherit;
+    }
+
+    .container {
+      width: min(calc(100% - 32px), var(--max-width));
+      margin: 0 auto;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 60;
+      backdrop-filter: blur(16px);
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(246, 249, 254, 0.96));
+      border-bottom: 1px solid rgba(58, 127, 227, 0.12);
+      box-shadow: 0 14px 30px rgba(32, 58, 102, 0.08);
+    }
+
+    .site-header::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, rgba(58, 127, 227, 0.82), rgba(200, 154, 98, 0.42) 52%, rgba(58, 127, 227, 0.66) 100%);
+    }
+
+    .header-inner {
+      position: relative;
+      min-height: var(--header-height);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      padding: 14px 0;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      min-width: 0;
+    }
+
+    .brand-mark {
+      position: relative;
+      flex: 0 0 auto;
+      width: 54px;
+      height: 54px;
+      border-radius: 16px;
+      overflow: hidden;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(243, 248, 255, 0.98));
+      border: 1px solid rgba(58, 127, 227, 0.16);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 10px 20px rgba(32, 58, 102, 0.07);
+    }
+
+    .brand-logo {
+      display: none;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      padding: 8px;
+      background: rgba(255, 255, 255, 0.98);
+    }
+
+    .brand-monogram {
+      position: absolute;
+      inset: 0;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--primary-deep);
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+    }
+
+    .brand-mark.is-loaded .brand-logo {
+      display: block;
+    }
+
+    .brand-mark.is-loaded .brand-monogram {
+      display: none;
+    }
+
+    .brand-text {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 2px;
+      min-width: 0;
+    }
+
+    .brand-title {
+      font-size: clamp(1.15rem, 1rem + 0.7vw, 1.65rem);
+      line-height: 1.1;
+      font-weight: 700;
+      color: var(--heading);
+      letter-spacing: 0.02em;
+    }
+
+    .brand-subtitle {
+      font-size: 0.92rem;
+      color: #c08a4f;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .site-nav {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 6px;
+      border-radius: 999px;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(245, 248, 253, 0.86));
+      border: 1px solid rgba(200, 154, 98, 0.08);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.92), 0 10px 18px rgba(32, 58, 102, 0.06), 0 8px 16px rgba(200, 154, 98, 0.03);
+    }
+
+    .nav-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 0 22px;
+      border-radius: 999px;
+      color: var(--heading);
+      font-weight: 700;
+      border: 1px solid transparent;
+      transition: background-color 0.24s ease, color 0.24s ease, transform 0.24s ease, box-shadow 0.24s ease, border-color 0.24s ease;
+      white-space: nowrap;
+    }
+
+    .nav-link:hover,
+    .nav-link:focus-visible,
+    .nav-link.is-active {
+      color: var(--heading);
+      background: linear-gradient(135deg, rgba(239, 246, 255, 0.98), rgba(251, 247, 241, 0.96));
+      border-color: rgba(200, 154, 98, 0.14);
+      box-shadow: 0 12px 20px rgba(58, 127, 227, 0.08), 0 8px 16px rgba(200, 154, 98, 0.05);
+      transform: translateY(-2px);
+      outline: none;
+    }
+
+    .nav-toggle {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      width: 46px;
+      height: 46px;
+      border-radius: 12px;
+      color: #ffffff;
+      background: linear-gradient(135deg, var(--primary-deep), var(--primary));
+      border: 1px solid rgba(58, 127, 227, 0.22);
+      box-shadow: 0 10px 18px rgba(58, 127, 227, 0.2);
+    }
+
+    .nav-toggle svg {
+      width: 22px;
+      height: 22px;
+    }
+
+    .page-root {
+      padding: 30px 0 0;
+    }
+
+    .view {
+      display: none;
+      opacity: 0;
+      transform: translateY(16px);
+      transition: opacity 0.28s ease, transform 0.28s ease;
+    }
+
+    .view.is-active {
+      display: block;
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .section-shell,
+    .hero-grid,
+    .announcement-panel {
+      display: grid;
+      gap: 24px;
+      margin-bottom: 28px;
+    }
+
+    .hero-slider {
+      position: relative;
+      min-height: clamp(360px, 58vw, 620px);
+      padding-inline: 42px;
+    }
+
+    .hero-frame {
+      position: relative;
+      overflow: hidden;
+      min-height: clamp(360px, 58vw, 620px);
+      border-radius: 30px;
+      border: 1px solid rgba(58, 127, 227, 0.12);
+      background:
+        linear-gradient(135deg, rgba(58, 127, 227, 0.18), rgba(248, 242, 233, 0.24) 44%, rgba(245, 249, 255, 0.76) 64%, rgba(255, 255, 255, 0.92));
+      box-shadow: var(--shadow);
+      isolation: isolate;
+    }
+
+    .slides,
+    .slide {
+      position: absolute;
+      inset: 0;
+    }
+
+    .slide {
+      opacity: 0;
+      transition: opacity 0.6s ease;
+      background:
+        linear-gradient(140deg, rgba(18, 37, 74, 0.76) 6%, rgba(51, 95, 173, 0.4) 48%, rgba(200, 154, 98, 0.08) 100%),
+        linear-gradient(135deg, rgba(255, 255, 255, 0.1), transparent);
+    }
+
+    .slide.is-active {
+      opacity: 1;
+    }
+
+    .slide img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      filter: saturate(0.95) contrast(1.03);
+    }
+
+    .slide.is-missing img {
+      opacity: 0;
+    }
+
+    .slide-placeholder {
+      position: absolute;
+      inset: 0;
+      display: grid;
+      place-items: center;
+      padding: 32px;
+      text-align: center;
+      color: transparent;
+      background:
+        radial-gradient(circle at 18% 18%, rgba(200, 154, 98, 0.1), transparent 28%),
+        radial-gradient(circle at 84% 24%, rgba(255, 255, 255, 0.12), transparent 24%),
+        linear-gradient(135deg, rgba(255, 255, 255, 0.04), transparent 40%);
+    }
+
+    .hero-overlay {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      align-content: end;
+      gap: 18px;
+      min-height: clamp(360px, 58vw, 620px);
+      padding: clamp(28px, 5vw, 54px);
+      color: #ffffff;
+      background: linear-gradient(180deg, rgba(18, 37, 74, 0.06) 0%, rgba(36, 71, 136, 0.34) 48%, rgba(16, 32, 64, 0.78) 100%);
+    }
+
+    .hero-kicker,
+    .eyebrow,
+    .pill {
+      display: inline-flex;
+      width: fit-content;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .hero-kicker {
+      padding: 8px 14px;
+      border: 1px solid rgba(255, 255, 255, 0.26);
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.12), rgba(233, 242, 255, 0.14), rgba(239, 225, 205, 0.1));
+      backdrop-filter: blur(8px);
+    }
+
+    .hero-title {
+      max-width: 760px;
+      margin: 0;
+      font-size: clamp(2rem, 1.5rem + 2.2vw, 4rem);
+      line-height: 1.05;
+      letter-spacing: 0.01em;
+    }
+
+    .hero-title span {
+      display: block;
+      margin-top: 6px;
+      font-size: clamp(1rem, 0.95rem + 0.8vw, 1.55rem);
+      color: #f1c995;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .hero-copy {
+      max-width: 720px;
+      margin: 0;
+      font-size: clamp(1rem, 0.95rem + 0.3vw, 1.15rem);
+      color: rgba(255, 255, 255, 0.92);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .button,
+    .button-secondary {
+      position: relative;
+      overflow: hidden;
+      isolation: isolate;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 50px;
+      padding: 0 22px;
+      border-radius: 14px;
+      font-weight: 700;
+      transition: transform 0.26s ease, box-shadow 0.26s ease, background-color 0.26s ease, border-color 0.26s ease;
+    }
+
+    .button {
+      color: #ffffff;
+      background: linear-gradient(135deg, #245dba, #4489ea);
+      box-shadow: 0 14px 24px rgba(58, 127, 227, 0.24);
+    }
+
+    .button-secondary {
+      color: #ffffff;
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.24), rgba(239, 225, 205, 0.1));
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.16);
+      backdrop-filter: blur(10px);
+    }
+
+    .button::before,
+    .button-secondary::before,
+    .announcement-link::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(120deg, transparent 18%, rgba(255, 255, 255, 0.24) 48%, transparent 74%);
+      transform: translateX(-120%);
+      transition: transform 0.65s ease;
+      pointer-events: none;
+    }
+
+    .button:hover,
+    .button:focus-visible,
+    .button-secondary:hover,
+    .button-secondary:focus-visible {
+      transform: translateY(-2px);
+      outline: none;
+    }
+
+    .button:hover,
+    .button:focus-visible {
+      box-shadow: 0 18px 30px rgba(58, 127, 227, 0.28);
+    }
+
+    .button-secondary:hover,
+    .button-secondary:focus-visible {
+      border-color: rgba(255, 255, 255, 0.42);
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.3), rgba(239, 225, 205, 0.12));
+    }
+
+    .button:hover::before,
+    .button:focus-visible::before,
+    .button-secondary:hover::before,
+    .button-secondary:focus-visible::before,
+    .announcement-link:hover::before,
+    .announcement-link:focus-visible::before {
+      transform: translateX(120%);
+    }
+
+    .slider-controls {
+      position: absolute;
+      inset: 0;
+      z-index: 3;
+      display: block;
+      pointer-events: none;
+    }
+
+    .slider-arrows,
+    .slider-dots {
+      display: flex;
+      pointer-events: auto;
+    }
+
+    .slider-arrows {
+      position: absolute;
+      top: 50%;
+      left: 18px;
+      right: 18px;
+      justify-content: space-between;
+      gap: 10px;
+      transform: translateY(-50%);
+    }
+
+    .slider-dots {
+      position: absolute;
+      left: 50%;
+      bottom: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px;
+      transform: translateX(-50%);
+    }
+
+    .slider-arrow {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 54px;
+      height: 54px;
+      border-radius: 999px;
+      color: var(--primary-deep);
+      background: rgba(255, 252, 247, 0.94);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 12px 22px rgba(32, 58, 102, 0.12);
+      backdrop-filter: blur(10px);
+      transition: transform 0.24s ease, box-shadow 0.24s ease, background-color 0.24s ease;
+    }
+
+    .slider-arrow:hover,
+    .slider-arrow:focus-visible {
+      background: #ffffff;
+      color: var(--heading);
+      transform: translateY(-2px) scale(1.02);
+      box-shadow: 0 16px 28px rgba(32, 58, 102, 0.16);
+      outline: none;
+    }
+
+    .slider-arrow svg {
+      width: 18px;
+      height: 18px;
+    }
+
+    .slider-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.62);
+      border: 1px solid rgba(255, 255, 255, 0.38);
+      transition: transform 0.2s ease, background-color 0.2s ease;
+    }
+
+    .slider-dot.is-active {
+      transform: scale(1.16);
+      background: #d9b182;
+    }
+
+    .card,
+    .liquidator-card,
+    .announcement-intro {
+      background: transparent;
+      border: 0;
+      border-radius: 0;
+      box-shadow: none;
+    }
+
+    .content-card {
+      padding: 6px 0 0;
+    }
+
+    .section-heading {
+      display: grid;
+      gap: 10px;
+      margin-bottom: 24px;
+    }
+
+    .section-heading h2,
+    .section-heading h3 {
+      margin: 0;
+      color: var(--heading);
+      line-height: 1.15;
+    }
+
+    .section-heading h2 {
+      font-size: clamp(1.55rem, 1.35rem + 0.9vw, 2.35rem);
+    }
+
+    .section-heading p {
+      margin: 0;
+      color: var(--text-muted);
+      max-width: 760px;
+      font-size: 1.04rem;
+    }
+
+    .eyebrow {
+      background: linear-gradient(135deg, rgba(233, 242, 255, 0.82), rgba(249, 242, 233, 0.6));
+      border: 1px solid rgba(200, 154, 98, 0.08);
+      color: var(--heading);
+    }
+
+    .overview-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+      gap: 24px;
+      align-items: start;
+    }
+
+    .overview-copy,
+    .overview-stat,
+    .unit-card,
+    .liquidator-card {
+      display: grid;
+      gap: 14px;
+      align-content: start;
+    }
+
+    .overview-copy p,
+    .unit-card p,
+    .liquidator-card p {
+      margin: 0;
+      color: var(--text-muted);
+      overflow-wrap: anywhere;
+    }
+
+    .overview-stat {
+      padding: 24px;
+      border-left: 0;
+      border-radius: 22px;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(245, 249, 255, 0.92), rgba(249, 243, 235, 0.7));
+      border: 1px solid rgba(215, 224, 238, 0.88);
+      box-shadow: 0 14px 28px rgba(32, 58, 102, 0.08);
+      transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
+      animation: cardFloatIn 0.6s ease both;
+    }
+
+    .overview-stat:hover,
+    .overview-stat:focus-within {
+      transform: translateY(-4px);
+      border-color: rgba(58, 127, 227, 0.18);
+      box-shadow: 0 18px 34px rgba(32, 58, 102, 0.12);
+    }
+
+    .stat-value {
+      margin: 0;
+      font-size: clamp(2rem, 1.8rem + 1vw, 2.8rem);
+      line-height: 1;
+      color: var(--heading);
+      font-weight: 700;
+    }
+
+    .stat-label {
+      margin: 0;
+      color: var(--text-muted);
+    }
+
+    .fact-table-wrap {
+      overflow: hidden;
+      border-radius: var(--radius-md);
+      border: 1px solid rgba(215, 224, 238, 0.9);
+      background: #ffffff;
+      box-shadow: 0 12px 24px rgba(32, 58, 102, 0.06);
+      transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
+      animation: cardFloatIn 0.6s ease both;
+    }
+
+    .fact-table {
+      width: 100%;
+      border-collapse: collapse;
+      table-layout: fixed;
+    }
+
+    .fact-table th,
+    .fact-table td {
+      padding: 16px 18px;
+      text-align: left;
+      vertical-align: top;
+      border-bottom: 1px solid rgba(215, 224, 238, 0.78);
+      overflow-wrap: anywhere;
+    }
+
+    .fact-table th {
+      width: 34%;
+      color: var(--heading);
+      font-size: 0.96rem;
+      background: linear-gradient(180deg, rgba(245, 249, 255, 0.94), rgba(233, 242, 255, 0.68), rgba(249, 243, 235, 0.44));
+      border-right: 1px solid rgba(215, 224, 238, 0.78);
+    }
+
+    .fact-table td {
+      color: var(--text);
+      background: #ffffff;
+    }
+
+    .fact-table tr:last-child th,
+    .fact-table tr:last-child td {
+      border-bottom: 0;
+    }
+
+    .unit-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 22px;
+    }
+
+    .unit-card {
+      height: 100%;
+      padding: 22px;
+      border-radius: 20px;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(245, 249, 255, 0.92), rgba(249, 243, 235, 0.68));
+      border: 1px solid rgba(215, 224, 238, 0.84);
+      box-shadow: 0 12px 24px rgba(32, 58, 102, 0.08);
+      transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
+      animation: cardFloatIn 0.6s ease both;
+    }
+
+    .fact-table-wrap:hover,
+    .fact-table-wrap:focus-within,
+    .unit-card:hover,
+    .unit-card:focus-within,
+    .footer-item:hover,
+    .footer-item:focus-within {
+      transform: translateY(-4px);
+      border-color: rgba(58, 127, 227, 0.18);
+      box-shadow: 0 18px 32px rgba(32, 58, 102, 0.12);
+    }
+
+    .unit-grid .unit-card:nth-child(1) {
+      animation-delay: 0.04s;
+    }
+
+    .unit-grid .unit-card:nth-child(2) {
+      animation-delay: 0.12s;
+    }
+
+    .unit-grid .unit-card:nth-child(3) {
+      animation-delay: 0.2s;
+    }
+
+    .unit-card h3,
+    .liquidator-card h3 {
+      margin: 0;
+      font-size: 1.22rem;
+      color: var(--heading);
+      line-height: 1.2;
+    }
+
+    .pill {
+      background: linear-gradient(135deg, rgba(233, 242, 255, 0.82), rgba(249, 242, 233, 0.62));
+      color: var(--heading);
+      font-size: 0.86rem;
+      letter-spacing: 0.04em;
+    }
+
+    .pill.warning {
+      color: #8d6330;
+      background: rgba(239, 225, 205, 0.7);
+    }
+
+    .notice-strip {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      padding: 20px 22px;
+      border: 1px solid rgba(215, 224, 238, 0.82);
+      border-radius: 24px;
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.98), rgba(244, 248, 255, 0.94), rgba(249, 243, 235, 0.62));
+      box-shadow: 0 12px 26px rgba(32, 58, 102, 0.06);
+      color: var(--heading);
+    }
+
+    .notice-strip p {
+      margin: 0;
+      max-width: 720px;
+      color: var(--text-muted);
+    }
+
+    .notice-strip strong {
+      display: block;
+      margin-bottom: 4px;
+      font-size: 1.08rem;
+      letter-spacing: 0.01em;
+    }
+
+    .announcement-intro {
+      position: relative;
+      overflow: hidden;
+      padding: 6px 0 0;
+    }
+
+    .announcement-intro::after {
+      display: none;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .announcement-marquee {
+      overflow: hidden;
+      border-radius: 18px;
+      border: 1px solid rgba(107, 39, 55, 0.16);
+      background: linear-gradient(135deg, #6b2737, #8a3448);
+      box-shadow: 0 12px 24px rgba(107, 39, 55, 0.16);
+    }
+
+    .announcement-marquee-track {
+      display: flex;
+      width: max-content;
+      white-space: nowrap;
+      animation: marqueeFlow 24s linear infinite;
+    }
+
+    .announcement-marquee-track span {
+      display: inline-flex;
+      align-items: center;
+      min-height: 52px;
+      padding: 0 28px;
+      color: #fff5ee;
+      font-size: 0.96rem;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+    }
+
+    .detail-sheet {
+      border-top: 1px solid rgba(215, 224, 238, 0.78);
+    }
+
+    .detail-row {
+      display: grid;
+      grid-template-columns: minmax(180px, 240px) minmax(0, 1fr);
+      gap: 18px;
+      padding: 16px 0;
+      border-bottom: 1px solid rgba(215, 224, 238, 0.78);
+    }
+
+    .detail-label {
+      color: var(--heading);
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+
+    .detail-value {
+      color: var(--text-muted);
+      overflow-wrap: anywhere;
+    }
+
+    .liquidator-panel {
+      padding: 26px 28px;
+      border-radius: 24px;
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.99), rgba(246, 249, 255, 0.95) 52%, rgba(249, 243, 235, 0.64));
+      border: 1px solid rgba(215, 224, 238, 0.88);
+      box-shadow: 0 14px 28px rgba(32, 58, 102, 0.08);
+    }
+
+    .detail-sheet-boxed {
+      border-top: 0;
+    }
+
+    .detail-sheet-boxed .detail-row:first-child {
+      padding-top: 0;
+    }
+
+    .detail-sheet-boxed .detail-row:last-child {
+      padding-bottom: 0;
+      border-bottom: 0;
+    }
+
+    .announcement-table-wrap {
+      overflow-x: auto;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(247, 250, 255, 0.96));
+      border: 1px solid rgba(215, 224, 238, 0.84);
+      border-radius: 20px;
+      box-shadow: 0 12px 24px rgba(32, 58, 102, 0.06);
+    }
+
+    .announcement-table {
+      width: 100%;
+      border-collapse: collapse;
+      table-layout: fixed;
+    }
+
+    .announcement-table th,
+    .announcement-table td {
+      padding: 16px 12px;
+      text-align: left;
+      vertical-align: top;
+      border-bottom: 1px solid rgba(215, 224, 238, 0.78);
+      overflow-wrap: anywhere;
+    }
+
+    .announcement-table th + th,
+    .announcement-table td + td {
+      border-left: 1px solid rgba(215, 224, 238, 0.7);
+    }
+
+    .announcement-table th {
+      color: var(--heading);
+      font-size: 0.95rem;
+      background: linear-gradient(180deg, rgba(245, 249, 255, 0.94), rgba(233, 242, 255, 0.68), rgba(249, 243, 235, 0.42));
+    }
+
+    .announcement-table tbody tr:nth-child(even) td {
+      background: rgba(238, 245, 255, 0.48);
+    }
+
+    .announcement-table tbody tr:last-child td {
+      border-bottom: 0;
+    }
+
+    .table-link,
+    .detail-value a,
+    .liquidator-card a {
+      color: var(--heading);
+      font-weight: 700;
+    }
+
+    .table-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: transform 0.22s ease, color 0.22s ease;
+    }
+
+    .table-link::after {
+      content: "\2197";
+      font-size: 0.95em;
+      line-height: 1;
+    }
+
+    .table-link:hover,
+    .table-link:focus-visible,
+    .detail-value a:hover,
+    .detail-value a:focus-visible,
+    .liquidator-card a:hover,
+    .liquidator-card a:focus-visible {
+      color: var(--heading);
+      transform: translateX(2px);
+      text-decoration: underline;
+      outline: none;
+    }
+
+    .muted-text,
+    .table-note {
+      color: var(--text-muted);
+    }
+
+    .site-footer {
+      margin-top: 22px;
+      padding: 0 0 34px;
+    }
+
+    .site-footer-minimal {
+      display: grid;
+      gap: 4px;
+      justify-items: center;
+      padding: 8px 0 0;
+      text-align: center;
+    }
+
+    .site-footer-title,
+    .site-footer-note {
+      margin: 0;
+    }
+
+    .site-footer-title {
+      color: var(--heading);
+      font-weight: 700;
+    }
+
+    .site-footer-note {
+      color: var(--text-muted);
+      font-size: 0.96rem;
+    }
+
+    .footer-card {
+      position: relative;
+      overflow: hidden;
+      display: grid;
+      gap: 22px;
+      padding: 28px;
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.99), rgba(247, 250, 255, 0.95) 52%, rgba(249, 243, 235, 0.7));
+      color: var(--text);
+      border: 1px solid rgba(215, 224, 238, 0.88);
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+    }
+
+    .footer-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 5px;
+      background: linear-gradient(90deg, rgba(58, 127, 227, 0.8), rgba(200, 154, 98, 0.34), rgba(58, 127, 227, 0.66));
+    }
+
+    .footer-head {
+      display: grid;
+      gap: 6px;
+    }
+
+    .footer-kicker {
+      margin: 0;
+      color: var(--heading);
+      font-size: 0.88rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .footer-title {
+      margin: 0;
+      color: var(--heading);
+      font-size: 1.28rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+
+    .footer-item {
+      display: grid;
+      gap: 10px;
+      padding: 18px 18px 16px;
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.9);
+      border: 1px solid rgba(215, 224, 238, 0.78);
+      transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
+      animation: cardFloatIn 0.6s ease both;
+    }
+
+    .footer-grid .footer-item:nth-child(1) {
+      animation-delay: 0.06s;
+    }
+
+    .footer-grid .footer-item:nth-child(2) {
+      animation-delay: 0.14s;
+    }
+
+    .footer-label {
+      margin: 0;
+      color: var(--heading);
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      font-size: 0.86rem;
+    }
+
+    .footer-text {
+      margin: 0;
+      max-width: 860px;
+      overflow-wrap: anywhere;
+    }
+
+    .footer-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      min-height: 44px;
+      padding: 0 16px;
+      border-radius: 999px;
+      color: var(--heading);
+      font-weight: 700;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(243, 248, 255, 0.96), rgba(249, 243, 235, 0.56));
+      border: 1px solid rgba(200, 154, 98, 0.12);
+      box-shadow: 0 10px 18px rgba(32, 58, 102, 0.1);
+      transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+    }
+
+    .footer-link:hover,
+    .footer-link:focus-visible {
+      color: var(--heading);
+      transform: translateY(-2px);
+      border-color: rgba(200, 154, 98, 0.18);
+      box-shadow: 0 16px 24px rgba(58, 127, 227, 0.08), 0 10px 16px rgba(200, 154, 98, 0.06);
+      text-decoration: none;
+      outline: none;
+    }
+
+    .footer-emails {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px 24px;
+      padding-top: 18px;
+      border-top: 1px solid rgba(215, 224, 238, 0.78);
+    }
+
+    .route-anchor {
+      scroll-margin-top: calc(var(--header-height) + 20px);
+    }
+
+    .spacer-top {
+      margin-top: 4px;
+    }
+
+    .list-reset {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .meta-list {
+      display: grid;
+      gap: 10px;
+    }
+
+    .meta-list li {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      color: var(--text-muted);
+      overflow-wrap: anywhere;
+    }
+
+    .meta-list strong {
+      color: var(--heading);
+      min-width: 112px;
+      flex: 0 0 auto;
+    }
+
+    code {
+      font-family: "Courier New", Courier, monospace;
+      font-size: 0.95em;
+      color: #9a6b2d;
+    }
+
+    .scroll-top {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      z-index: 80;
+      width: 48px;
+      height: 48px;
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      background: linear-gradient(180deg, var(--primary-deep), var(--primary));
+      box-shadow: 0 12px 24px rgba(58, 127, 227, 0.22);
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(10px);
+      transition: opacity 0.22s ease, transform 0.22s ease, visibility 0.22s ease, box-shadow 0.22s ease;
+    }
+
+    .scroll-top.is-visible {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .scroll-top:hover,
+    .scroll-top:focus-visible {
+      transform: translateY(-3px) scale(1.03);
+      box-shadow: 0 18px 30px rgba(58, 127, 227, 0.26);
+      outline: none;
+    }
+
+    .scroll-top svg {
+      width: 18px;
+      height: 18px;
+    }
+
+    @keyframes cardFloatIn {
+      from {
+        opacity: 0;
+        transform: translateY(16px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes marqueeFlow {
+      from {
+        transform: translateX(0);
+      }
+      to {
+        transform: translateX(-50%);
+      }
+    }
+
+    @media (max-width: 940px) {
+      .overview-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 820px) {
+      :root {
+        --header-height: 78px;
+      }
+
+      .header-inner {
+        gap: 16px;
+      }
+
+      .nav-toggle {
+        display: inline-flex;
+        flex: 0 0 auto;
+      }
+
+      .site-nav {
+        position: absolute;
+        top: calc(100% + 10px);
+        left: 16px;
+        right: 16px;
+        display: grid;
+        gap: 10px;
+        padding: 14px;
+        border-radius: 20px;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.99), rgba(245, 249, 255, 0.99));
+        border: 1px solid rgba(215, 224, 238, 0.84);
+        box-shadow: var(--shadow);
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-6px);
+        transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease;
+      }
+
+      .site-nav.is-open {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+      }
+
+      .nav-link {
+        justify-content: flex-start;
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .container {
+        width: min(calc(100% - 24px), var(--max-width));
+      }
+
+      .page-root {
+        padding-top: 18px;
+      }
+
+      .hero-overlay {
+        gap: 14px;
+        min-height: 580px;
+        padding: 24px 20px 140px;
+      }
+
+      .announcement-marquee-track span {
+        min-height: 48px;
+        padding: 0 20px;
+        font-size: 0.88rem;
+      }
+
+      .hero-slider {
+        padding-inline: 0;
+      }
+
+      .hero-kicker {
+        max-width: 100%;
+        font-size: 0.8rem;
+      }
+
+      .hero-title {
+        font-size: clamp(1.95rem, 1.45rem + 2vw, 2.9rem);
+      }
+
+      .hero-copy {
+        font-size: 1rem;
+      }
+
+      .hero-actions,
+      .brand {
+        gap: 10px;
+      }
+
+      .hero-actions {
+        display: grid;
+        grid-template-columns: 1fr;
+      }
+
+      .button,
+      .button-secondary {
+        width: 100%;
+      }
+
+      .slider-arrows {
+        top: auto;
+        bottom: 72px;
+        left: 18px;
+        right: 18px;
+        transform: none;
+      }
+
+      .slider-dots {
+        bottom: 24px;
+      }
+
+      .slider-arrow {
+        width: 40px;
+        height: 40px;
+      }
+
+      .overview-stat {
+        padding: 18px;
+        border-left: 0;
+        border-radius: 20px;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(245, 249, 255, 0.96));
+        border: 1px solid rgba(215, 224, 238, 0.82);
+        box-shadow: 0 10px 20px rgba(32, 58, 102, 0.08);
+      }
+
+      .liquidator-panel {
+        padding: 22px 20px;
+      }
+
+      .section-shell,
+      .hero-grid,
+      .announcement-panel {
+        gap: 20px;
+      }
+
+      .scroll-top {
+        right: 12px;
+        bottom: 12px;
+        width: 42px;
+        height: 42px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .brand-mark {
+        width: 46px;
+        height: 46px;
+      }
+
+      .brand-title {
+        font-size: 1.05rem;
+      }
+
+      .brand-subtitle {
+        font-size: 0.82rem;
+        letter-spacing: 0.06em;
+      }
+
+      .fact-table,
+      .fact-table tbody,
+      .fact-table tr,
+      .fact-table th,
+      .fact-table td {
+        display: block;
+        width: 100%;
+      }
+
+      .fact-table tr {
+        border-bottom: 1px solid rgba(228, 211, 187, 0.78);
+      }
+
+      .fact-table tr:last-child {
+        border-bottom: 0;
+      }
+
+      .fact-table th,
+      .fact-table td {
+        border-bottom: 0;
+      }
+
+      .fact-table th {
+        padding-bottom: 8px;
+      }
+
+      .fact-table td {
+        padding-top: 0;
+        padding-bottom: 16px;
+      }
+
+      .meta-list li {
+        display: grid;
+        gap: 4px;
+      }
+
+      .meta-list strong {
+        min-width: 0;
+      }
+
+      .detail-row {
+        grid-template-columns: 1fr;
+        gap: 6px;
+      }
+
+      .announcement-table {
+        min-width: 0;
+      }
+
+      .announcement-table th,
+      .announcement-table td {
+        padding: 13px 10px;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .header-inner {
+        gap: 12px;
+      }
+
+      .brand {
+        gap: 10px;
+      }
+
+      .hero-overlay {
+        min-height: 560px;
+        padding: 20px 18px 138px;
+      }
+
+      .hero-frame {
+        border-radius: 26px;
+      }
+
+      .hero-title {
+        font-size: 1.8rem;
+      }
+
+      .hero-copy {
+        line-height: 1.55;
+      }
+
+      .slider-arrows {
+        bottom: 76px;
+        left: 12px;
+        right: 12px;
+      }
+
+      .slider-arrow {
+        width: 38px;
+        height: 38px;
+      }
+
+      .overview-stat,
+      .unit-card,
+      .liquidator-panel {
+        padding: 16px;
+      }
+
+      .notice-strip {
+        gap: 12px;
+        padding: 18px 16px;
+      }
+
+      .scroll-top {
+        width: 40px;
+        height: 40px;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .brand-title {
+        font-size: 0.98rem;
+      }
+
+      .brand-subtitle {
+        font-size: 0.76rem;
+      }
+
+      .hero-kicker {
+        font-size: 0.76rem;
+        padding: 8px 12px;
+      }
+
+      .hero-title {
+        font-size: 1.65rem;
+      }
+
+      .footer-card {
+        padding: 22px;
+      }
+
+      .footer-item {
+        padding: 16px;
+      }
+
+      .footer-emails {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner container">
+      <button class="brand" type="button" data-route="home" aria-label="Go to homepage">
+        <span class="brand-mark" aria-hidden="true">
+          <img class="brand-logo" id="brandLogo" src="images/logo.png" alt="">
+          <span class="brand-monogram" id="brandMonogram">VHM</span>
+        </span>
+        <span class="brand-text">
+          <span class="brand-title">VHM Industries Ltd</span>
+          <span class="brand-subtitle">Under Liquidation</span>
+        </span>
+      </button>
+
+      <button
+        class="nav-toggle"
+        type="button"
+        id="navToggle"
+        aria-expanded="false"
+        aria-controls="primaryNav"
+        aria-label="Toggle navigation"
+      >
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path>
+        </svg>
+      </button>
+
+      <nav class="site-nav" id="primaryNav" aria-label="Primary">
+        <a class="nav-link" href="#/home" data-route="home">Home</a>
+        <a class="nav-link" href="#/announcements" data-route="announcements" data-scroll-target="#announcementCategories">Latest Announcements</a>
+        <a class="nav-link" href="#/contact" data-route="contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-root">
+    <div class="container">
+      <section class="view" data-view="home" aria-labelledby="homeTitle">
+        <div class="section-shell">
+          <section class="hero-grid route-anchor">
+            <div class="hero-slider" aria-label="Company image slider">
+              <div class="hero-frame">
+                <div class="slides" id="slidesContainer"></div>
+
+                <div class="hero-overlay">
+                  <div class="hero-kicker">Official Public Information Portal</div>
+                  <h1 class="hero-title" id="homeTitle">
+                    VHM Industries Ltd
+                    <span>Under Liquidation</span>
+                  </h1>
+                  <p class="hero-copy">
+                    Public-facing corporate information, process contacts, and announcement access for VHM Industries Ltd during liquidation proceedings.
+                  </p>
+                  <div class="hero-actions">
+                    <a class="button" href="#/announcements" data-route="announcements" data-scroll-target="#announcementCategories">View Latest Announcements</a>
+                    <a class="button-secondary" href="#/contact" data-route="contact">Contact Details</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="slider-controls">
+                <div class="slider-arrows">
+                  <button class="slider-arrow" id="prevSlide" type="button" aria-label="Previous image">
+                    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                      <path d="M15 18 9 12l6-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </button>
+                  <button class="slider-arrow" id="nextSlide" type="button" aria-label="Next image">
+                    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                      <path d="m9 18 6-6-6-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </button>
+                </div>
+                <div class="slider-dots" id="sliderDots" aria-label="Slider navigation"></div>
+              </div>
+            </div>
+          </section>
+
+          <section class="notice-strip">
+            <div>
+              <strong>Latest Announcements</strong>
+              <p>Access NCLT orders, creditor lists, e-auction notices, and process memoranda from the dedicated announcements page.</p>
+            </div>
+            <a class="button" href="#/announcements" data-route="announcements" data-scroll-target="#announcementCategories">Open Announcements</a>
+          </section>
+
+          <section class="card content-card">
+            <div class="section-heading">
+              <span class="eyebrow">Company Overview</span>
+              <h2>VHM Industries Limited</h2>
+            </div>
+            <div class="overview-grid">
+              <div class="overview-copy">
+                <p>
+                  VHM Industries Limited is a public limited company incorporated on 31 August 1987 and registered with the Registrar of Companies, Mumbai. Over its growth journey, the company built a presence in the textile sector through cotton shirting and blended suiting and shirting fabrics, supported by a manufacturing network designed to serve domestic and international markets.
+                </p>
+                <p>
+                  The business expanded from its original operations into additional units in Maharashtra and Gujarat, with weaving, fabric processing, and yarn dyeing capabilities added over time. Presently, the company is engaged in the manufacturing of cotton shirting, and this website functions as the formal public information and document access portal during the liquidation process.
+                </p>
+              </div>
+
+              <aside class="overview-stat">
+                <span class="eyebrow">Business Snapshot</span>
+                <p class="stat-value">1987</p>
+                <p class="stat-label">Year of incorporation with a long-standing manufacturing footprint across textile operations.</p>
+                <div class="pill">Textile Manufacturing</div>
+              </aside>
+            </div>
+          </section>
+
+          <section class="card content-card">
+            <div class="section-heading">
+              <span class="eyebrow">Company At A Glance</span>
+              <h2>Corporate particulars and operating profile</h2>
+              <p>
+                The following summary presents key company information relevant to stakeholders and public notices.
+              </p>
+            </div>
+            <div class="fact-table-wrap">
+              <table class="fact-table" aria-label="Company facts">
+                <tbody id="factTableBody"></tbody>
+              </table>
+            </div>
+          </section>
+
+          <section class="card content-card">
+            <div class="section-heading">
+              <span class="eyebrow">Operational Units</span>
+              <h2>Manufacturing and asset locations</h2>
+              <p>
+                The company has operated from multiple manufacturing and industrial locations. Current location details are shown below for reference.
+              </p>
+            </div>
+            <div class="unit-grid" id="unitGrid"></div>
+          </section>
+
+          <section class="content-card">
+            <div class="liquidator-panel">
+              <div class="section-heading">
+                <span class="eyebrow">Liquidator</span>
+                <h2>Liquidation contact highlight</h2>
+                <p>
+                  The primary liquidation contact details are provided below for stakeholder communication and official correspondence.
+                </p>
+              </div>
+
+              <div class="detail-sheet detail-sheet-boxed">
+                <div class="detail-row">
+                  <div class="detail-label">Liquidator</div>
+                  <div class="detail-value">CA Ashish Saoji</div>
+                </div>
+                <div class="detail-row">
+                  <div class="detail-label">Process Email</div>
+                  <div class="detail-value"><a href="mailto:cirp.vhm@gmail.com">cirp.vhm@gmail.com</a></div>
+                </div>
+                <div class="detail-row">
+                  <div class="detail-label">Liquidator Email</div>
+                  <div class="detail-value"><a href="mailto:ashishsaoji@gmail.com">ashishsaoji@gmail.com</a></div>
+                </div>
+                <div class="detail-row">
+                  <div class="detail-label">Liquidator Office</div>
+                  <div class="detail-value">Vijaywargi Khabiya &amp; Saoji, Chartered Accountants, 3rd Floor, MG House, Rabindranath Tagore Marg, Civil Lines, Nagpur - 440001</div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <section class="view" data-view="announcements" aria-labelledby="announcementTitle">
+        <div class="announcement-panel">
+          <section class="announcement-intro route-anchor" id="announcementIntro">
+            <h2 id="announcementTitle" class="sr-only">Official notices and public documents</h2>
+            <div class="announcement-marquee" aria-hidden="true">
+              <div class="announcement-marquee-track">
+                <span>Latest Announcements • Official notices, tribunal orders, creditor information, auction notices, process documents, and other related documents are available below •</span>
+                <span>Latest Announcements • Official notices, tribunal orders, creditor information, auction notices, process documents, and other related documents are available below •</span>
+              </div>
+            </div>
+          </section>
+
+          <section class="content-card route-anchor" id="announcementCategories">
+            <div class="section-heading">
+              <span class="eyebrow">Announcement Register</span>
+              <h2>Public notice table</h2>
+              <p>
+                The table below reflects public notices and document availability for stakeholders and visitors.
+              </p>
+            </div>
+            <div id="documentOutput" class="spacer-top"></div>
+          </section>
+        </div>
+      </section>
+
+      <section class="view" data-view="contact" aria-labelledby="contactTitle">
+        <div class="section-shell">
+          <section class="content-card">
+            <div class="section-heading">
+              <span class="eyebrow">Contact</span>
+              <h2 id="contactTitle">Process and liquidator contact details</h2>
+              <p>
+                Official liquidation communication details are provided below.
+              </p>
+            </div>
+
+            <div class="liquidator-panel">
+              <div class="detail-sheet detail-sheet-boxed">
+                <div class="detail-row">
+                  <div class="detail-label">Liquidator</div>
+                  <div class="detail-value">CA Ashish Saoji</div>
+                </div>
+                <div class="detail-row">
+                  <div class="detail-label">Process Email</div>
+                  <div class="detail-value"><a href="mailto:cirp.vhm@gmail.com">cirp.vhm@gmail.com</a></div>
+                </div>
+                <div class="detail-row">
+                  <div class="detail-label">Liquidator Email</div>
+                  <div class="detail-value"><a href="mailto:ashishsaoji@gmail.com">ashishsaoji@gmail.com</a></div>
+                </div>
+                <div class="detail-row">
+                  <div class="detail-label">Liquidator Office</div>
+                  <div class="detail-value">Vijaywargi Khabiya &amp; Saoji, Chartered Accountants, 3rd Floor, MG House, Rabindranath Tagore Marg, Civil Lines, Nagpur - 440001</div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer-minimal">
+        <p class="site-footer-title">VHM Industries Ltd - Under Liquidation</p>
+        <p class="site-footer-note">Official public information and announcements portal.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scrollTopButton" type="button" aria-label="Scroll to top">
+    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <path d="m6 14 6-6 6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path>
+    </svg>
+  </button>
+
+  <script src="pdfs/announcements.js"></script>
+  <script>
+    const slides = [
+      { src: "images/hero-01.jpg", alt: "Manufacturing and textile operations of VHM Industries Ltd" },
+      { src: "images/hero-02.jpg", alt: "Industrial facilities associated with VHM Industries Ltd" },
+      { src: "images/hero-03.jpg", alt: "Operational infrastructure and assets of VHM Industries Ltd" }
+    ];
+
+    const facts = [
+      ["Date of Incorporation", "31 August 1987"],
+      ["Corporate Identification Number (CIN)", "U17100MH1987PLC044506"],
+      ["Registration Number", "044506"],
+      ["Company Type", "Public limited company"],
+      ["Registrar of Companies", "Mumbai"],
+      ["Authorised Capital", "Rs. 365,000,000"],
+      ["Paid-up Capital", "Rs. 316,659,986"],
+      ["Last AGM", "09 February 2023"],
+      ["Last Balance Sheet", "31 March 2022"],
+      ["Current Business Focus", "Manufacturing of cotton shirting"],
+      ["Historic Product Range", "Cotton fabrics, polyester viscose, polyester cotton, polyester woolen, shirting and suiting fabrics"]
+    ];
+
+    const units = [
+      {
+        title: "Unit 1 - Amravati",
+        status: "Operational Location",
+        location: "T-2, MIDC Additional Amravati Industrial Area (Textile Zone), Nandgaonpeth, Dist. Amravati, Maharashtra, India",
+        summary: "Factory land at Amravati measures approximately 55,200 sq. mtrs. An additional MIDC plot of about 48,640 sq. mtrs, allotted in December 2015, is presently unutilised and may support future expansion."
+      },
+      {
+        title: "Unit 2 - Mankoli, Thane",
+        status: "Operational Location",
+        location: "106, Indian Corporation, Mankoli Naka, Near Thane Nashik Highway, Thane, Maharashtra, India",
+        summary: "The factory property at Mankoli, Thane comprises approximately 10,949.34 sq. ft. of built-up area and forms part of the company's Maharashtra industrial footprint."
+      },
+      {
+        title: "Unit 3 - Umbergaon, Gujarat",
+        status: "Non-operational Unit",
+        location: "Umbergaon, Gujarat, India",
+        summary: "The factory land at Umbergaon, Gujarat admeasures approximately 1,784 sq. mtrs. The factory building comprises a ground floor, first floor, and a partial second floor. The ground and first floors are presently on rent, while the small second-floor portion is vacant and in poor condition."
+      }
+    ];
+
+    const fallbackAnnouncements = [
+      { category: "NCLT Orders", title: "Documents will be published shortly", date: "-", file: "" },
+      { category: "List of Creditors", title: "Documents will be published shortly", date: "-", file: "" },
+      { category: "E-auction Notices", title: "Documents will be published shortly", date: "-", file: "" },
+      { category: "Process Memorandum", title: "Documents will be published shortly", date: "-", file: "" }
+    ];
+
+    const announcements = Array.isArray(window.__VHM_ANNOUNCEMENTS__) && window.__VHM_ANNOUNCEMENTS__.length
+      ? window.__VHM_ANNOUNCEMENTS__
+      : fallbackAnnouncements;
+
+    const views = Array.from(document.querySelectorAll(".view"));
+    const navLinks = Array.from(document.querySelectorAll("[data-route]"));
+    const navToggle = document.getElementById("navToggle");
+    const primaryNav = document.getElementById("primaryNav");
+    const slidesContainer = document.getElementById("slidesContainer");
+    const sliderDots = document.getElementById("sliderDots");
+    const factTableBody = document.getElementById("factTableBody");
+    const unitGrid = document.getElementById("unitGrid");
+    const documentOutput = document.getElementById("documentOutput");
+    const prevSlideButton = document.getElementById("prevSlide");
+    const nextSlideButton = document.getElementById("nextSlide");
+    const scrollTopButton = document.getElementById("scrollTopButton");
+    const brandLogo = document.getElementById("brandLogo");
+    const brandMonogram = document.getElementById("brandMonogram");
+
+    let currentRoute = "home";
+    let currentSlide = 0;
+    let sliderTimer = null;
+
+    initialize();
+
+    function initialize() {
+      if ("scrollRestoration" in history) {
+        history.scrollRestoration = "manual";
+      }
+
+      renderSlides();
+      renderFacts();
+      renderUnits();
+      renderDocuments();
+      seedInitialHistory();
+      bindEvents();
+      renderRoute(getRouteFromHash(), { replace: true, restoreScroll: true });
+      startSliderAutoplay();
+    }
+
+    function normalizeRoute(route) {
+      return ["home", "announcements", "contact"].includes(route) ? route : "home";
+    }
+
+    function getRouteFromHash() {
+      const route = window.location.hash.replace(/^#\/?/, "").split("/")[0].trim();
+      return normalizeRoute(route || "home");
+    }
+
+    function getHashForRoute(route) {
+      return "#/" + normalizeRoute(route);
+    }
+
+    function seedInitialHistory() {
+      const route = getRouteFromHash();
+      const targetHash = getHashForRoute(route);
+
+      if (window.location.hash !== targetHash) {
+        history.replaceState({ vhm: true, route: route, seed: true }, "", targetHash);
+      } else if (!history.state || !history.state.vhm) {
+        history.replaceState({ vhm: true, route: route, seed: true }, "", targetHash);
+      }
+
+      if (!history.state || !history.state.seededDuplicate) {
+        history.pushState({ vhm: true, route: route, seededDuplicate: true }, "", targetHash);
+      }
+    }
+
+    function bindEvents() {
+      document.addEventListener("click", handleDocumentClick);
+
+      window.addEventListener("popstate", (event) => {
+        const route = event.state && event.state.vhm ? event.state.route : getRouteFromHash();
+        renderRoute(route, { restoreScroll: true });
+      });
+
+      window.addEventListener("hashchange", () => {
+        if (!history.state || !history.state.vhm) {
+          renderRoute(getRouteFromHash(), { replace: true, restoreScroll: true });
+        }
+      });
+
+      navToggle.addEventListener("click", () => {
+        const isOpen = primaryNav.classList.toggle("is-open");
+        navToggle.setAttribute("aria-expanded", String(isOpen));
+      });
+
+      prevSlideButton.addEventListener("click", () => {
+        showSlide(currentSlide - 1);
+        restartSliderAutoplay();
+      });
+
+      nextSlideButton.addEventListener("click", () => {
+        showSlide(currentSlide + 1);
+        restartSliderAutoplay();
+      });
+
+      window.addEventListener("scroll", toggleScrollTopButton, { passive: true });
+
+      scrollTopButton.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+
+      slidesContainer.addEventListener("mouseenter", stopSliderAutoplay);
+      slidesContainer.addEventListener("mouseleave", startSliderAutoplay);
+      slidesContainer.addEventListener("focusin", stopSliderAutoplay);
+      slidesContainer.addEventListener("focusout", startSliderAutoplay);
+
+      if (brandLogo) {
+        brandLogo.addEventListener("load", () => {
+          brandLogo.parentElement.classList.add("is-loaded");
+        });
+
+        brandLogo.addEventListener("error", () => {
+          brandLogo.parentElement.classList.remove("is-loaded");
+          brandLogo.style.display = "none";
+          if (brandMonogram) {
+            brandMonogram.style.display = "inline-flex";
+          }
+        });
+
+        if (brandLogo.complete && brandLogo.naturalWidth > 0) {
+          brandLogo.parentElement.classList.add("is-loaded");
+        }
+      }
+
+      toggleScrollTopButton();
+    }
+
+    function handleDocumentClick(event) {
+      const routeTrigger = event.target.closest("[data-route]");
+
+      if (routeTrigger) {
+        const route = routeTrigger.getAttribute("data-route");
+        const scrollTarget = routeTrigger.getAttribute("data-scroll-target");
+        event.preventDefault();
+        navigate(route, { scrollTarget: scrollTarget || null });
+      }
+    }
+
+    function navigate(route, options = {}) {
+      const nextRoute = normalizeRoute(route);
+      const targetHash = getHashForRoute(nextRoute);
+
+      if (options.replace) {
+        history.replaceState({ vhm: true, route: nextRoute }, "", targetHash);
+      } else {
+        history.pushState({ vhm: true, route: nextRoute }, "", targetHash);
+      }
+
+      renderRoute(nextRoute, options);
+    }
+
+    function renderRoute(route, options = {}) {
+      currentRoute = normalizeRoute(route);
+
+      views.forEach((view) => {
+        const isActive = view.getAttribute("data-view") === currentRoute;
+        view.classList.toggle("is-active", isActive);
+      });
+
+      navLinks.forEach((link) => {
+        link.classList.toggle("is-active", link.getAttribute("data-route") === currentRoute);
+      });
+
+      if (primaryNav.classList.contains("is-open")) {
+        primaryNav.classList.remove("is-open");
+        navToggle.setAttribute("aria-expanded", "false");
+      }
+
+      if (window.location.hash !== getHashForRoute(currentRoute)) {
+        history.replaceState({ vhm: true, route: currentRoute }, "", getHashForRoute(currentRoute));
+      }
+
+      const topBehavior = options.restoreScroll || options.scrollTarget ? "auto" : "smooth";
+      window.scrollTo({ top: 0, behavior: topBehavior });
+
+      if (currentRoute === "announcements" && options.scrollTarget) {
+        requestAnimationFrame(() => {
+          const target = document.querySelector(options.scrollTarget);
+          if (target) {
+            target.scrollIntoView({ behavior: "smooth", block: "start" });
+          }
+        });
+      }
+    }
+
+    function renderSlides() {
+      slidesContainer.innerHTML = slides
+        .map((slide, index) => {
+          return `
+            <article class="slide${index === 0 ? " is-active" : ""}" data-slide-index="${index}">
+              <img src="${slide.src}" alt="${slide.alt}" loading="${index === 0 ? "eager" : "lazy"}">
+              <div class="slide-placeholder">${slide.alt}</div>
+            </article>
+          `;
+        })
+        .join("");
+
+      sliderDots.innerHTML = slides
+        .map((slide, index) => {
+          return `<button class="slider-dot${index === 0 ? " is-active" : ""}" type="button" data-slide-dot="${index}" aria-label="View slide ${index + 1}"></button>`;
+        })
+        .join("");
+
+      slidesContainer.querySelectorAll("img").forEach((image) => {
+        image.addEventListener("error", () => {
+          image.closest(".slide").classList.add("is-missing");
+        });
+      });
+
+      sliderDots.querySelectorAll("[data-slide-dot]").forEach((dot) => {
+        dot.addEventListener("click", () => {
+          showSlide(Number(dot.getAttribute("data-slide-dot")));
+          restartSliderAutoplay();
+        });
+      });
+    }
+
+    function showSlide(nextIndex) {
+      const total = slides.length || 1;
+      currentSlide = (nextIndex + total) % total;
+
+      slidesContainer.querySelectorAll(".slide").forEach((slide, index) => {
+        slide.classList.toggle("is-active", index === currentSlide);
+      });
+
+      sliderDots.querySelectorAll(".slider-dot").forEach((dot, index) => {
+        dot.classList.toggle("is-active", index === currentSlide);
+      });
+    }
+
+    function startSliderAutoplay() {
+      if (window.matchMedia("(prefers-reduced-motion: reduce)").matches || slides.length < 2) {
+        return;
+      }
+
+      stopSliderAutoplay();
+      sliderTimer = window.setInterval(() => {
+        showSlide(currentSlide + 1);
+      }, 4500);
+    }
+
+    function stopSliderAutoplay() {
+      if (sliderTimer) {
+        window.clearInterval(sliderTimer);
+        sliderTimer = null;
+      }
+    }
+
+    function restartSliderAutoplay() {
+      stopSliderAutoplay();
+      startSliderAutoplay();
+    }
+
+    function toggleScrollTopButton() {
+      scrollTopButton.classList.toggle("is-visible", window.scrollY > 340);
+    }
+
+    function renderFacts() {
+      factTableBody.innerHTML = facts
+        .map(([label, value]) => {
+          return `
+            <tr>
+              <th scope="row">${label}</th>
+              <td>${value}</td>
+            </tr>
+          `;
+        })
+        .join("");
+    }
+
+    function renderUnits() {
+      unitGrid.innerHTML = units
+        .map((unit) => {
+          const warningClass = unit.status.toLowerCase().includes("non-operational") ? " warning" : "";
+          return `
+            <article class="unit-card">
+              <div class="pill${warningClass}">${unit.status}</div>
+              <h3>${unit.title}</h3>
+              <p>${unit.location}</p>
+              <p>${unit.summary}</p>
+            </article>
+          `;
+        })
+        .join("");
+    }
+
+    function renderDocuments() {
+      documentOutput.innerHTML = `
+        <div class="announcement-table-wrap">
+          <table class="announcement-table" aria-label="Latest announcements">
+            <thead>
+              <tr>
+                <th scope="col">Category</th>
+                <th scope="col">Document</th>
+              </tr>
+            </thead>
+            <tbody>
+              ${announcements
+                .map((documentItem) => {
+                  const documentMarkup = documentItem.file
+                    ? `<a class="table-link" href="${documentItem.file}" target="_blank" rel="noopener noreferrer">${documentItem.title}</a>`
+                    : `<span class="muted-text">${documentItem.title}</span>`;
+
+                  return `
+                    <tr>
+                      <td>${documentItem.category}</td>
+                      <td>${documentMarkup}</td>
+                    </tr>
+                  `;
+                })
+                .join("")}
+            </tbody>
+          </table>
+        </div>
+      `;
+    }
+  </script>
+</body>
+</html>
