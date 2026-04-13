@@ -10,14 +10,19 @@ ROOT_DIR = Path(__file__).resolve().parents[1]
 PDF_DIR = ROOT_DIR / "pdfs"
 OUTPUT_FILE = PDF_DIR / "announcements.js"
 
-CATEGORY_RULES = [
-    ("NCLT Orders", ["nclt orders", "nclt order", "nclt-orders", "nclt"]),
-    ("List of Creditors", ["list of creditors", "creditors", "creditor"]),
-    ("E-auction Notices", ["e-auction notices", "e auction notices", "e-auction", "auction notice", "auction"]),
-    ("Process Memorandum", ["process memorandum", "process memo", "memorandum", "process-memorandum"]),
-]
+CATEGORY_LABELS = {
+    "nclt-orders": "NCLT Orders",
+    "list-of-creditors": "List of Creditors",
+    "e-auction-notices": "E-auction Notices",
+    "process-memorandum": "Process Memorandum",
+}
 
-CATEGORY_ORDER = {name: index for index, (name, _) in enumerate(CATEGORY_RULES)}
+CATEGORY_ORDER = {
+    "NCLT Orders": 0,
+    "List of Creditors": 1,
+    "E-auction Notices": 2,
+    "Process Memorandum": 3,
+}
 SPECIAL_WORDS = {
     "ca": "CA",
     "cirp": "CIRP",
@@ -33,12 +38,20 @@ def normalize_text(value: str) -> str:
     return re.sub(r"[^a-z0-9]+", " ", value.lower()).strip()
 
 
-def detect_category(relative_path: Path) -> str:
-    haystack = " ".join(normalize_text(part) for part in relative_path.parts)
+def format_category_name(folder_name: str) -> str:
+    normalized = folder_name.strip().replace("_", "-").lower()
 
-    for category, markers in CATEGORY_RULES:
-        if any(normalize_text(marker) in haystack for marker in markers):
-            return category
+    if normalized in CATEGORY_LABELS:
+        return CATEGORY_LABELS[normalized]
+
+    return format_title(folder_name)
+
+
+def detect_category(relative_path: Path) -> str:
+    pdf_relative_path = relative_path.relative_to(PDF_DIR)
+
+    if len(pdf_relative_path.parts) > 1:
+        return format_category_name(pdf_relative_path.parts[0])
 
     return "General Notices"
 
@@ -69,7 +82,7 @@ def build_documents() -> list[dict[str, str]]:
 
     for file_path in PDF_DIR.rglob("*.pdf"):
         relative_path = file_path.relative_to(ROOT_DIR)
-        category = detect_category(relative_path.relative_to(PDF_DIR.parent))
+        category = detect_category(file_path)
         documents.append(
             {
                 "category": category,
@@ -79,7 +92,7 @@ def build_documents() -> list[dict[str, str]]:
         )
 
     documents.sort(key=lambda item: item["title"].lower(), reverse=True)
-    documents.sort(key=lambda item: CATEGORY_ORDER.get(item["category"], 999))
+    documents.sort(key=lambda item: (CATEGORY_ORDER.get(item["category"], 999), item["category"].lower()))
     return documents
 
 
